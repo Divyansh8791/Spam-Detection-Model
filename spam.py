@@ -35,7 +35,7 @@ for i in range(0 , 5572):
     df['v2'][i] = remove_stopwords(df['v2'][i])
 
 
-########################################################################### PART-3 : SELCTING THE MODEL AND TRAIN THE MODEL.
+########################################################################### PART-2 : SELCTING THE MODEL AND TRAIN THE MODEL.
 
 # change the textual data into needed numerical data.
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -64,16 +64,9 @@ accuracy = accuracy_score(y_test, predictions)
 print(f"Accuracy: {accuracy:.2f}")
 
 # Calculate the confusion matrix
-from sklearn.metrics import confusion_matrix , precision_score , recall_score
-# re = recall_score(y_test , predictions)
-# pre  = precision_score(y_test , predictions)
+from sklearn.metrics import confusion_matrix   
 confu  = confusion_matrix(y_test, predictions)
-print()
-# print()
-# print("Precesion Score : " , pre)
-# print()
-# print("Recall Score : " , re)
-# print()
-print("Confusion matrix :" , confu)
-print()
+print() 
+print("Confusion matrix :" )
+print(confu)
 print()
